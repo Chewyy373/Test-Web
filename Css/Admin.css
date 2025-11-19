@@ -1,0 +1,272 @@
+/* ================================
+   GLOBAL
+================================ */
+body {
+  margin: 0;
+  display: flex;
+  font-family: Poppins, Arial, sans-serif;
+  background: #f8f9fb;
+  height: 100vh;
+}
+
+img {
+  border-radius: 4px;
+}
+
+/* CONTENT WRAPPER */
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* ================================
+   DASHBOARD GRID & CARDS
+================================ */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  margin-bottom: 25px;
+}
+
+.stat-value {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  color: #666;
+  font-size: 14px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* ================================
+   PRODUCT LIST (BEST SELLING)
+================================ */
+.product {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.product img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px dashed #ff7b00;
+  padding: 5px;
+  background: #fff;
+  margin-bottom: 15px;
+}
+
+/* ================================
+   CHART
+================================ */
+.chart-wrapper {
+  height: 300px;
+}
+
+select {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: white;
+}
+
+.chart-wrapper {
+    width: 100%;
+    height: 350px;   /* wajib ada */
+}
+
+
+/* ================================
+   ADMIN PANEL + SIDEBAR
+================================ */
+.sidebar {
+  width: 220px;
+  background: #222;
+  color: #fff;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 22px;
+}
+
+.sidebar button {
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 12px;
+  text-align: left;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar button:hover,
+.sidebar button.active {
+  background: #444;
+}
+
+/* CLOSE BUTTON (HP MODE) */
+.close-btn {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  padding: 10px;
+  color: white;
+  width: fit-content;
+  margin-left: auto;
+}
+
+/* ================================
+   TABLE (MENU PESANAN)
+================================ */
+.table-container { width: 100%; overflow-x: auto; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  min-width: 600px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+th {
+  background: #ff7b00;
+  color: #fff;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.btn {
+  background: #ff7b00;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.btn:hover { background: #ff6333; }
+
+.btn-paid {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 5px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn-cancel {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.hidden { display: none; }
+
+
+/* ================================
+   RESPONSIVE ( MOBILE / TABLET )
+================================ */
+.hamburger { display: none; }
+
+@media (max-width: 768px) {
+
+  body { flex-direction: column; }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translateX(-100%);
+    z-index: 999;
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .hamburger {
+    display: block;
+    margin: 10px;
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+  .close-btn { display: block; }
+
+  /* Buttons adapt */
+  .btn, .btn-paid, .btn-cancel {
+    display: block;
+    width: 60%;
+    margin-bottom: 6px;
+  }
+
+  td:last-child { width: 90px; }
+
+  table img {
+    width: 60px;
+    height: auto;
+  }
+
+  table th, table td {
+    font-size: 13px;
+    padding: 6px 8px;
+  }
+
+  table { min-width: 400px; }
+}
+
+@media (max-width: 480px) {
+
+  table th, table td {
+    font-size: 12px;
+    padding: 4px;
+  }
+
+  table { min-width: 350px; }
+}

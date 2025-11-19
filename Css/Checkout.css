@@ -1,0 +1,208 @@
+:root {
+  --accent-color: #ff7043;
+  --accent-hover: #ff5722;
+  --success-color: #25D366;
+  --bg-light: #fff8f6;
+  --text-dark: #333;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-light);
+  margin: 0;
+  padding: 20px;
+  color: var(--text-dark);
+}
+
+h2 {
+  text-align: center;
+  color: var(--accent-color);
+  margin-bottom: 25px;
+}
+
+.checkout-container {
+  max-width: 800px;
+  background: white;
+  margin: 0 auto;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔹 Tabel Pesanan */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: var(--accent-color);
+  color: white;
+  font-weight: 600;
+}
+
+tr:hover {
+  background-color: #fff2ec;
+}
+
+/* 🔹 Input Data Pembeli */
+.user-info {
+  margin-bottom: 20px;
+}
+
+.user-info label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.user-info input,
+.user-info textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 12px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.user-info input:focus,
+.user-info textarea:focus {
+  border-color: var(--accent-color);
+}
+
+/* 🔹 Total Harga */
+.total {
+  font-weight: bold;
+  font-size: 18px;
+  text-align: right;
+  margin-top: 20px;
+  color: var(--accent-color);
+}
+
+.back-btn {
+  display: block;
+  background: #ff7f50;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 20px auto 0;
+  transition: background 0.3s;
+  text-decoration: none;
+  text-align: center;
+  width: 10%;
+}
+
+.back-btn:hover {
+  background-color: #ff6333;
+  transform: scale(1.05);
+}
+
+/* 🔹 Tombol WhatsApp */
+.whatsapp-btn {
+  display: block;
+  background: #ff7f50;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 20px auto 0;
+  transition: background 0.3s;
+}
+
+.whatsapp-btn:hover {
+  background: #ff6333;
+  transform: scale(1.05);
+}
+
+/* 🔹 Responsif */
+@media (max-width: 600px) {
+  table th, table td {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .checkout-container {
+    padding: 15px;
+  }
+
+  .whatsapp-btn {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .checkout-container {
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  table th, table td {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .total {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .back-btn{
+    width: 30%;
+  }
+  
+  .whatsapp-btn {
+    width: 75%;
+    font-size: 15px;
+  }
+  .user-info {
+    margin-bottom: 20px;
+    }
+
+    .user-info label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    }
+
+    .user-info input,
+    .user-info textarea {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 12px;
+    outline: none;
+    transition: border-color 0.3s;
+    }
+
+    .user-info input:focus,
+    .user-info textarea:focus {
+    border-color: var(--accent-color);
+    }
+
+    table {
+    width: 100%;
+    margin-bottom: 20px;
+    }
+}
